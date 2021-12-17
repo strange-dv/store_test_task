@@ -6,6 +6,7 @@ class Category(models.Model):
         "self",
         on_delete=models.CASCADE,
         related_name="subordinate_categories",
+        null=True,
         blank=True,
     )
     name = models.CharField(max_length=256, unique=True, db_index=True)
