@@ -10,26 +10,25 @@ Test task
 Example response:
 ```json
 {
-  "name": "First",
-  "subordinate_categories": [
-  {
-    "name": "Second",
+    "name": "First",
     "subordinate_categories": [
-    {
-      "name": "Third",
-      "subordinate_categories": [],
-      "superior_category": {
-      "name": "Second"
-      }
-    }
-    ],
-    ]
-    "superior_category": {
+        {
+            "name": "Second",
+            "subordinate_categories": [
+                {
+                    "name": "Third",
+                    "subordinate_categories": [],
+                    "superior_category": {
+                        "name": "Second"
+                    }
+                }
+            ],
+            "superior_category": {
                 "name": "First"
             }
         },
         {
-            "name": "Second2",
+            "name": "Second8",
             "subordinate_categories": [],
             "superior_category": {
                 "name": "First"
