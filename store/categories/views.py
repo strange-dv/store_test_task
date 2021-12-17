@@ -18,9 +18,7 @@ class CategoryView(RetrieveAPIView):
 
         if self.lookup_url_kwarg in self.request.GET:
             filter_kwargs = {
-                self.lookup_url_kwarg: self.request.GET.get(
-                    self.lookup_url_kwarg
-                )
+                self.lookup_url_kwarg: self.request.GET.get(self.lookup_url_kwarg)
             }
             obj = get_object_or_404(queryset, **filter_kwargs)
         else:
