@@ -6,6 +6,42 @@ Test task
 
 ### Categories endpoint:
 `/categories/`<br>
+(Can be used with /?name= url kwarg to define the start category)<br>
+Example response:
+```json
+{
+  "name": "First",
+  "subordinate_categories": [
+  {
+    "name": "Second",
+    "subordinate_categories": [
+    {
+      "name": "Third",
+      "subordinate_categories": [],
+      "superior_category": {
+      "name": "Second"
+      }
+    }
+    ],
+    ]
+    "superior_category": {
+                "name": "First"
+            }
+        },
+        {
+            "name": "Second2",
+            "subordinate_categories": [],
+            "superior_category": {
+                "name": "First"
+            }
+        }
+    ],
+    "superior_category": null
+}
+```
+
+### Products endpoint:
+`/products/`<br>
 Example response:
 ```json
 [
@@ -22,38 +58,4 @@ Example response:
         }
     }
 ]
-```
-
-### Products endpoint:
-`/products/`<br>
-Example response:
-```json
-{
-    "name": "First",
-    "subordinate_categories": [
-        {
-            "name": "Second",
-            "subordinate_categories": [
-                {
-                    "name": "Third",
-                    "subordinate_categories": [],
-                    "superior_category": {
-                        "name": "Second"
-                    }
-                }
-            ],
-            "superior_category": {
-                "name": "First"
-            }
-        },
-        {
-            "name": "Second2",
-            "subordinate_categories": [],
-            "superior_category": {
-                "name": "First"
-            }
-        }
-    ],
-    "superior_category": null
-}
 ```
